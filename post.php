@@ -9,8 +9,17 @@
 <h1 style="text-align: center;">Webboard_Ball</h1>
 <hr>
     
-   <div style="text-align: center;"> ต้องการค้นหากระทู้หมายเลข <?php echo $_GET["id"];?></div>
-
+   <div style="text-align: center;"> ต้องการค้นหากระทู้หมายเลข <?php echo $_GET["id"];?>
+   <br>
+   <?php
+   $i = $_GET['id'];
+   if (($i % 2) ==0 )
+      echo "เป็นกระทู้หมายเลขคู่";
+   else
+      echo "เป็นกระทู้หมายเลขคี่";
+   ?>
+   </br>
+</div>
 <form action="verify.php" method ="post">
 <table style="border:2px solid black; width:40%" align="center">
 <tr><td colspan="2" style="background-color: #6CD2FE;">แสดงความคิดเห็น</td></tr>
@@ -20,5 +29,5 @@
 <tr><th colspan="2"><input type="submit" value="ส่งข้อความ"></th></tr> 
 </table>
 <div align = "center">
-<a href="index.html">กลับไปหน้าหลัก</a>
+<a href="index.php">กลับไปหน้าหลัก</a>
 </div>
