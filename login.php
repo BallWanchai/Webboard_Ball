@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(isset($_SESSION['id']) ){
+    header("location:index.php");
+    die();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,12 +21,13 @@
 <tr><td>Login</td><td><input type="text" name="login"  required></td></tr>
 <tr><td>Password</td><td><input type="Password" name = "pwd"  required></td></tr>
 
+
 <tr><th colspan="2"><input type="submit" value="login"></th></tr> 
 </table>
 </form>
 <div style="text-align: center;">
 ยังไม่ได้สมัครสมาชิก
-<a href="register.html">กรุณาสมัครสมาชิก</a></div>
+<a href="register.php">กรุณาสมัครสมาชิก</a></div>
 <a href="index.php">กลับไปหน้าหลัก</a>
 </body>
 </html>
